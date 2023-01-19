@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Target</title>
+</head>
+
+<body>
+    <script>
+        // 1) Ao final do processamento, qual será o valor da variável SOMA?
+        var INDICE = 13,
+            SOMA = 0,
+            K = 0;
+
+        while (K < INDICE) {
+            K = K + 1
+            SOMA = SOMA + K
+        }
+        document.write(SOMA + "<br><br>")
+
+        // Resposta: 91
+
+        // 2) Escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.
+        var numeroInformado = 89,
+            Num1 = 0,
+            Num2 = 1,
+            proxNum = 0;
+
+        for (let i = 1; i <= 100; i++) {
+            proxNum = Num2 + Num1
+            Num1 = Num2;
+            Num2 = proxNum
+
+            if (Num1 == numeroInformado) {
+                document.write(" <b>" + Num1 + "</b>");
+                document.write(" <br> O número está na sequência Fibonacci <br>");
+                break;
+            }
+            if (i == 100) {
+                document.write(" <br> O número não está na sequência Fibonacci <br>");
+            }
+        }
+
+        // 3) Dado um vetor que guarda o valor de faturamento diário de uma distribuidora, faça um programa, na linguagem que desejar, que calcule e retorne:
+        // • O menor valor de faturamento ocorrido em um dia do mês;
+        // • O maior valor de faturamento ocorrido em um dia do mês;
+        // • Número de dias no mês em que o valor de faturamento diário foi superior à média mensal.
+        // IMPORTANTE:
+        // a) Usar o json ou xml disponível como fonte dos dados do faturamento mensal;
+        // b) Podem existir dias sem faturamento, como nos finais de semana e feriados. Estes dias devem ser ignorados no cálculo da média;
+
+        // Sinto muito, não consegui fazer :(
+
+
+        // 4) Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado teve dentro do valor total mensal da distribuidora.
+        var SP = 67836.43,
+            RJ = 36678.66,
+            MG = 29229.88,
+            ES = 27165.48,
+            Outros = 19849.53,
+            Total = SP+RJ+MG+ES+Outros,
+            PerSP,PerRJ,PerMG,PerES,PerOutros;
+        
+            PerSP = (SP*100)/Total; //37.53
+            document.write(" <br>" + PerSP.toFixed(2))
+            PerRJ = (RJ*100)/Total; //20.29
+            document.write(" <br>" + PerRJ.toFixed(2))
+            PerMG = (MG*100)/Total; //16.17
+            document.write(" <br>" + PerMG.toFixed(2))
+            PerES = (ES*100)/Total; //15.03
+            document.write(" <br>" + PerES.toFixed(2))
+            PerOutros = (Outros*100)/Total; //10.98
+            document.write(" <br>" + PerOutros.toFixed(2))
+        
+        // 5) Escreva um programa que inverta os caracteres de um string.
+        var A = "Gyovanna", B = "Santos", C;
+        document.write("<br><br>" + A + " " + B)
+        C = A;
+        A = B;
+        B = C;
+        // Invertido
+        document.write("<br>" + A + " " + B)
+            
+    </script>
+</body>
+
+</html>
